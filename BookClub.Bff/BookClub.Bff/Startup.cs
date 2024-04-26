@@ -3,6 +3,8 @@ using System.Text.Json.Serialization;
 using System.Text.Json.Serialization.Metadata;
 using BookClub.Bff.Books;
 using BookClub.Bff.Exceptions;
+using BookClub.Bff.Storage;
+using MongoDB.Driver;
 
 namespace BookClub.Bff;
 
@@ -17,7 +19,11 @@ public class Startup
 
     public void ConfigureServices(IServiceCollection services)
     {
+        services.AddSingleton<IMongoClient>(sp => Configuration["MongoConnectionString"] == null
+        ? null
+        : new MongoClient(Configuration["MongoConnectionString"]));
         services.AddScoped<IBooksService, BooksService>();
+        services.AddScoped<IBooksRepo, MongoBooksRepo>();
         services.AddControllers()
             .AddJsonOptions(options =>
             {
