@@ -1,35 +1,48 @@
-using System.Text.Json.Serialization;
+using BookClub.Bff;
 
-var builder = WebApplication.CreateSlimBuilder(args);
 
-builder.Services.ConfigureHttpJsonOptions(options =>
+var configBuilder = new ConfigurationBuilder()
+    .SetBasePath(Directory.GetCurrentDirectory())
+    .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+    // This does not support environment-specific configuration files.
+    // Instead, per-environment logging configuration should be accomplished by
+    // modifying appsettings.json during packaging or releasing.
+    .AddEnvironmentVariables();
+
+var Configuration = configBuilder.Build();
+
+Console.WriteLine("Building and running WebHost");
+
+try
 {
-    options.SerializerOptions.TypeInfoResolverChain.Insert(0, AppJsonSerializerContext.Default);
-});
+    var builder = Host.CreateDefaultBuilder(args);
+    var build = builder
+        .ConfigureWebHostDefaults(webBuilder =>
+        {
+            webBuilder.UseStartup<Startup>();
+            webBuilder.UseConfiguration(Configuration);
+            // Leaving the web root directory unspecified defaults to this same value ("wwwroot").
+            // However, just letting it default means that if the directory doesn't exist
+            // _at startup time_,  the Static Files middleware won't serve any files at all! By
+            // specifying it, the directory will be created on startup if necessary and files
+            // that appear in it later will be served. This is useful during local development
+            // because webpack can be putting new files in there.
+            webBuilder.UseWebRoot("wwwroot");
+        })
+        .Build();
 
-var app = builder.Build();
 
-var sampleTodos = new Todo[] {
-    new(1, "Walk the dog"),
-    new(2, "Do the dishes", DateOnly.FromDateTime(DateTime.Now)),
-    new(3, "Do the laundry", DateOnly.FromDateTime(DateTime.Now.AddDays(1))),
-    new(4, "Clean the bathroom"),
-    new(5, "Clean the car", DateOnly.FromDateTime(DateTime.Now.AddDays(2)))
-};
-
-var todosApi = app.MapGroup("/todos");
-todosApi.MapGet("/", () => sampleTodos);
-todosApi.MapGet("/{id}", (int id) =>
-    sampleTodos.FirstOrDefault(a => a.Id == id) is { } todo
-        ? Results.Ok(todo)
-        : Results.NotFound());
-
-app.Run();
-
-public record Todo(int Id, string? Title, DateOnly? DueBy = null, bool IsComplete = false);
-
-[JsonSerializable(typeof(Todo[]))]
-internal partial class AppJsonSerializerContext : JsonSerializerContext
-{
-
+    build.Run();
+    Console.WriteLine("WebHost exiting normally");
 }
+catch (Exception ex)
+{
+    Console.WriteLine("WebHost terminated unexpectedly.", ex.Message);
+    return 1;
+}
+finally
+{
+    Console.WriteLine("Close and Flush");
+}
+return 0;
+
