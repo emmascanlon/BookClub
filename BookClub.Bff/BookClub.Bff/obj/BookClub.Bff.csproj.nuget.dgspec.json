@@ -1,0 +1,107 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\emscanl\\BookClub.Bff\\BookClub.Bff\\BookClub.Bff.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\emscanl\\BookClub.Bff\\BookClub.Bff\\BookClub.Bff.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\emscanl\\BookClub.Bff\\BookClub.Bff\\BookClub.Bff.csproj",
+        "projectName": "BookClub.Bff",
+        "projectPath": "C:\\Users\\emscanl\\BookClub.Bff\\BookClub.Bff\\BookClub.Bff.csproj",
+        "packagesPath": "C:\\Users\\emscanl\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\emscanl\\BookClub.Bff\\BookClub.Bff\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\emscanl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://artifacts.mktp.io/artifactory/api/nuget/nuget-all": {},
+          "https://artifacts.mktp.io/artifactory/api/nuget/nuget-branches": {},
+          "https://artifacts.mktp.io/artifactory/api/nuget/nuget-master": {},
+          "https://artifacts.mktp.io/artifactory/api/nuget/powershell": {},
+          "https://nuget.pkg.github.com/im-client/index.json": {},
+          "https://nuget.pkg.github.com/im-customer-engagement/index.json": {},
+          "https://nuget.pkg.github.com/im-enrollment/index.json": {},
+          "https://nuget.pkg.github.com/im-funding/index.json": {},
+          "https://nuget.pkg.github.com/im-platform/index.json": {},
+          "https://nuget.pkg.github.com/im-practices/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.DotNet.ILCompiler": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.4, )",
+              "autoReferenced": true
+            },
+            "Microsoft.NET.ILLink.Tasks": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.4, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "runtime.win-x64.Microsoft.DotNet.ILCompiler",
+              "version": "[8.0.4, 8.0.4]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

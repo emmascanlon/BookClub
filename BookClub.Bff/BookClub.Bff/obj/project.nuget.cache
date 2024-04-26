@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "IzIiUawoJ9PJhKa6rkXwTiaG2aguUbqYYGzLYRmcfyXNCrZG9UIWhs4gt7oszWbKle45cbsDNH/0cDis2RHo3A==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\emscanl\\BookClub.Bff\\BookClub.Bff\\BookClub.Bff.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\emscanl\\.nuget\\packages\\microsoft.dotnet.ilcompiler\\8.0.4\\microsoft.dotnet.ilcompiler.8.0.4.nupkg.sha512",
+    "C:\\Users\\emscanl\\.nuget\\packages\\microsoft.net.illink.tasks\\8.0.4\\microsoft.net.illink.tasks.8.0.4.nupkg.sha512",
+    "C:\\Users\\emscanl\\.nuget\\packages\\runtime.win-x64.microsoft.dotnet.ilcompiler\\8.0.4\\runtime.win-x64.microsoft.dotnet.ilcompiler.8.0.4.nupkg.sha512"
+  ],
+  "logs": []
+}

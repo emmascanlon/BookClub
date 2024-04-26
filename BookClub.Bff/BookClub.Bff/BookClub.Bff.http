@@ -1,0 +1,11 @@
+@BookClub.Bff_HostAddress = http://localhost:5065
+
+GET {{BookClub.Bff_HostAddress}}/todos/
+Accept: application/json
+
+###
+
+GET {{BookClub.Bff_HostAddress}}/todos/1
+Accept: application/json
+
+###
