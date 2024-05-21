@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\emscanl\\BookClub.Bff\\BookClub.Bff\\BookClub.Bff.csproj": {}
+    "C:\\Users\\emscanl\\personal-projects\\BookClub\\BookClub.Bff\\BookClub.Bff\\BookClub.Bff.csproj": {}
   },
   "projects": {
-    "C:\\Users\\emscanl\\BookClub.Bff\\BookClub.Bff\\BookClub.Bff.csproj": {
+    "C:\\Users\\emscanl\\personal-projects\\BookClub\\BookClub.Bff\\BookClub.Bff\\BookClub.Bff.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\emscanl\\BookClub.Bff\\BookClub.Bff\\BookClub.Bff.csproj",
+        "projectUniqueName": "C:\\Users\\emscanl\\personal-projects\\BookClub\\BookClub.Bff\\BookClub.Bff\\BookClub.Bff.csproj",
         "projectName": "BookClub.Bff",
-        "projectPath": "C:\\Users\\emscanl\\BookClub.Bff\\BookClub.Bff\\BookClub.Bff.csproj",
+        "projectPath": "C:\\Users\\emscanl\\personal-projects\\BookClub\\BookClub.Bff\\BookClub.Bff\\BookClub.Bff.csproj",
         "packagesPath": "C:\\Users\\emscanl\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\emscanl\\BookClub.Bff\\BookClub.Bff\\obj\\",
+        "outputPath": "C:\\Users\\emscanl\\personal-projects\\BookClub\\BookClub.Bff\\BookClub.Bff\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -23,7 +23,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net7.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -41,8 +41,8 @@
           "https://nuget.pkg.github.com/im-practices/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net7.0": {
+            "targetAlias": "net7.0",
             "projectReferences": {}
           }
         },
@@ -58,20 +58,30 @@
         }
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net7.0": {
+          "targetAlias": "net7.0",
           "dependencies": {
             "Microsoft.DotNet.ILCompiler": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.4, )",
+              "version": "[7.0.18, )",
+              "autoReferenced": true
+            },
+            "Microsoft.NET.ILLink.Analyzers": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.100-1.23211.1, )",
               "autoReferenced": true
             },
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.4, )",
+              "version": "[7.0.100-1.23211.1, )",
               "autoReferenced": true
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.22.0, )"
             }
           },
           "imports": [
@@ -88,7 +98,7 @@
           "downloadDependencies": [
             {
               "name": "runtime.win-x64.Microsoft.DotNet.ILCompiler",
-              "version": "[8.0.4, 8.0.4]"
+              "version": "[7.0.18, 7.0.18]"
             }
           ],
           "frameworkReferences": {
@@ -99,7 +109,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
         }
       }
     }
